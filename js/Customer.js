@@ -11,11 +11,11 @@ $(document).ready(function () {
       for (var i = 0; i < data.result.length; i++) {
         const date = data.result[i].created_on_date;
         const year = date.substring(0, 4);
-        const month = date.substring(5,7);
-        const day = date.substring (8, 10);
-        const hour = date.substring (11, 13);
-        const min = date.substring (14, 16);
-        const second = date.substring (17, 19);
+        const month = date.substring(5, 7);
+        const day = date.substring(8, 10);
+        const hour = date.substring(11, 13);
+        const min = date.substring(14, 16);
+        const second = date.substring(17, 19);
         const datefull = day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + second
 
         rows += "<tr>";

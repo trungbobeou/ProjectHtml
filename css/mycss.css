@@ -8,8 +8,8 @@ body {
 
 #searchbar td input {
   display: block;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -18,11 +18,11 @@ body {
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-section{
+section {
   width: 100%;
   float: left;
   height: 100vh;
@@ -34,5 +34,3 @@ section{
   padding: 3px;
   box-sizing: border-box;
 }
-
-

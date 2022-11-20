@@ -104,7 +104,7 @@ function keyboardInput(key) {
 }
 
 // for deleting value using backspace
-function backspaceKeyEvent (event) {
+function backspaceKeyEvent(event) {
     if (event.which === 8) {
         deleteSingle();
     }
@@ -115,7 +115,7 @@ caculatorFunction = function () {
     // -- function calling and stuff:
     // for blocking alphabets into input field and helping calculation through keyboard keys
     document.onkeypress = keyboardInput;
-    
+
     // for deleting value using backspace
     document.onkeydown = backspaceKeyEvent;
 
@@ -139,12 +139,12 @@ caculatorFunction = function () {
     clear.onclick = clearAll;
 };
 
-$(document).ready(function() {
-    $("#closeCaculator").click(function(event) {
+$(document).ready(function () {
+    $("#closeCaculator").click(function (event) {
         document.onkeypress = false;
         document.onkeydown = false;
     });
-    $("#openCaculator").click(function(event) {
+    $("#openCaculator").click(function (event) {
         document.onkeypress = keyboardInput;
         document.onkeydown = backspaceKeyEvent;
     });
