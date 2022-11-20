@@ -142,52 +142,6 @@
       </div>
       <!-- Container wrapper -->
     </nav>
-
-
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-center">
-            <h5 class="modal-title text-white fw-bolder text-center" id="staticBackdropLabel">Máy tính</h5>
-          </div>
-          <div class="modal-body">
-            <div class="formContainer">
-              <form name="calculator">
-                <input id="display" autocomplete="off" type="text" value="">
-                <input class="inputs" type="button" value="(">
-                <input class="inputs" type="button" value=")">
-                <input id="backspace" type="button" value="&lArr;">
-                <input id="clear" type="button" value="c">
-
-                <input class="inputs" type="button" value="7">
-                <input class="inputs" type="button" value="8">
-                <input class="inputs" type="button" value="9">
-                <input class="operators" type="button" value="/">
-
-                <input class="inputs" type="button" value="4">
-                <input class="inputs" type="button" value="5">
-                <input class="inputs" type="button" value="6">
-                <input class="operators" type="button" value="*">
-
-                <input class="inputs" type="button" value="1">
-                <input class="inputs" type="button" value="2">
-                <input class="inputs" type="button" value="3">
-                <input class="operators" type="button" value="-">
-
-                <input class="inputs" type="button" value=".">
-                <input class="inputs" type="button" value="0">
-                <input id="equal" type="button" value="=">
-                <input class="operators" type="button" value="+">
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeCaculator">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <br /><br />
     <section id="customers">
       <br /><br /><br /><br />
@@ -254,9 +208,18 @@
             <th class="text-center">Họ tên</th>
             <th class="text-center">Email</th>
             <th class="text-center">Ngày tạo</th>
+            <th class="text-center">Ngày tạo</th>
           </tr>
         </thead>
         <tbody>
+          <tr class="text-center">
+            <td class="text-center">STT</td>
+            <td class="text-center">Tài khoản</td>
+            <td class="text-center">Họ tên</td>
+            <td class="text-center">Email</td>
+            <td class="text-center">Ngày tạo</td>
+            <td class="text-center">Mật khẩu</td>
+          </tr>
         </tbody>
         <tfoot>
           <tr class="text-center">
@@ -265,10 +228,91 @@
             <th class="text-center">Họ tên</th>
             <th class="text-center">Email</th>
             <th class="text-center">Ngày tạo</th>
+            <th class="text-center">Ngày tạo</th>
           </tr>
         </tfoot>
       </table>
     </section>
+
+
+    <!--Modal section-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-center">
+            <h5 class="modal-title text-white fw-bolder text-center" id="staticBackdropLabel">Máy tính</h5>
+          </div>
+          <div class="modal-body">
+            <div class="formContainer">
+              <form name="calculator">
+                <input id="display" autocomplete="off" type="text" value="">
+                <input class="inputs" type="button" value="(">
+                <input class="inputs" type="button" value=")">
+                <input id="backspace" type="button" value="&lArr;">
+                <input id="clear" type="button" value="c">
+
+                <input class="inputs" type="button" value="7">
+                <input class="inputs" type="button" value="8">
+                <input class="inputs" type="button" value="9">
+                <input class="operators" type="button" value="/">
+
+                <input class="inputs" type="button" value="4">
+                <input class="inputs" type="button" value="5">
+                <input class="inputs" type="button" value="6">
+                <input class="operators" type="button" value="*">
+
+                <input class="inputs" type="button" value="1">
+                <input class="inputs" type="button" value="2">
+                <input class="inputs" type="button" value="3">
+                <input class="operators" type="button" value="-">
+
+                <input class="inputs" type="button" value=".">
+                <input class="inputs" type="button" value="0">
+                <input id="equal" type="button" value="=">
+                <input class="operators" type="button" value="+">
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeCaculator">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="editEmployees" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-center">
+            <h5 class="modal-title text-white fw-bolder text-center" id="staticBackdropLabel">Chi tiết nhân viên <span
+                id="usernameEmployee" class="text-warning fw-bolder text-decoration-underline"></span></h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Tài khoản</span>
+                <input type="text" class="form-control" placeholder="Tài khoản" aria-label="Tài khoản" aria-describedby="basic-addon1" id="taikhoannv">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2">Password</span>
+                <input type="password" class="form-control" placeholder="Mật khẩu" aria-label="Password" aria-describedby="basic-addon2" id="matkhaunv">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2">Tên nhân viên</span>
+                <input type="text" class="form-control" placeholder="Tên nhân viên" aria-label="Tên nhân viên" aria-describedby="basic-addon3" id="tennv">
+              </div>         
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeCaculator">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="closeCaculator">Save</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <!--/Modal section-->
 
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>

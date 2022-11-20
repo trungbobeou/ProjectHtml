@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#usersTable tfoot th").each(function () {
     var title = $(this).text();
-    $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+    $(this).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
   });
 
   $("#usersTable").DataTable({
@@ -23,18 +23,25 @@ $(document).ready(function () {
           });
         });
     },
+    columnDefs: [
+      {
+          target: 5,
+          visible: false,
+      }
+    ],
   });
 
   $("#usersTable tbody").on("dblclick", "tr", function () {
     var table = $("#usersTable").DataTable();
     var data = table.row(this).data();
-    console.log(data[1]);
-    $('#editnvModal').modal('show');
-    
+    $("#usernameEmployee").html(data[1]);
+    $("#editEmployees").modal('show');
+    $("#taikhoannv").val(data[1]);
+    $("#matkhaunv").val(data[5]);
+    $("#tennv").val(data[2]);
   });
 
-  $('#editnvModal').on('show.bs.modal', function (event) {
-    console.log(data[2]);
+  $('#editEmployees').on('show.bs.modal', function (event) {
   })
 
   function loadAllUsers() {

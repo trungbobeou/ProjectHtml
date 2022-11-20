@@ -29,8 +29,18 @@ section {
   position: relative;
 }
 
-#usersTable tfoot input {
+#usersTable tfoot tr th {
+  position: relative;
+}
+
+#usersTable tfoot tr th input {
+  display: block;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
   width: 100%;
-  padding: 3px;
-  box-sizing: border-box;
+  border: none;
+  padding: 10px;
+  box-sizing: inherit;
 }
