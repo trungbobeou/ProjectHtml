@@ -1,0 +1,38 @@
+body {
+  background-image: url("../img/pexels-pixabay-206359.jpg")
+}
+
+#searchbar td {
+  position: relative;
+}
+
+#searchbar td input {
+  display: block;
+  top:0;
+  left:0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+section{
+  width: 100%;
+  float: left;
+  height: 100vh;
+  position: relative;
+}
+
+#usersTable tfoot input {
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+
