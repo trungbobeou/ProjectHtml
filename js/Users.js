@@ -29,7 +29,13 @@ $(document).ready(function () {
     var table = $("#usersTable").DataTable();
     var data = table.row(this).data();
     console.log(data[1]);
+    $('#editnvModal').modal('show');
+    
   });
+
+  $('#editnvModal').on('show.bs.modal', function (event) {
+    console.log(data[2]);
+  })
 
   function loadAllUsers() {
     $.getJSON("http://localhost:3000/users", function (data) {
