@@ -25,9 +25,13 @@ $(document).ready(function () {
     },
     columnDefs: [
       {
-          target: 5,
-          visible: false,
-      }
+        target: 5,
+        visible: false,
+      },
+      {
+        target: 6,
+        visible: false,
+      },
     ],
   });
 
@@ -39,6 +43,7 @@ $(document).ready(function () {
     $("#taikhoannv").val(data[1]);
     $("#matkhaunv").val(data[5]);
     $("#tennv").val(data[2]);
+    $("#manv").val(data[6]);
   });
 
   $('#editEmployees').on('show.bs.modal', function (event) {
@@ -76,6 +81,8 @@ $(document).ready(function () {
             data.result[i].display_name,
             data.result[i].email,
             datefull,
+            data.result[i].password,
+            data.result[i].user_id,
           ])
           .draw();
 
