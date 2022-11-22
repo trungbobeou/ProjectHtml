@@ -24,9 +24,13 @@ $(document).ready(function () {
 
     var array = [813, 820, 829, 870, 835, 859, 801, 812, 815, 817, 825, 852, 833, 834, 836, 858];
     for (var i = 0; i < array.length; i++) {
-        var rowLine = "<li id='" + array[i] + "' class='list-group-item'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + array[i] + "</li>"
+        var rowLine = "<li id='" + array[i] + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + array[i] + "</li>"
         $("#listGroupLine").append(rowLine);
     }
+
+    $("#listGroupLine li").on("click", function(){
+        console.log('asd');
+    })
 })
 
 /*Time Function*/
