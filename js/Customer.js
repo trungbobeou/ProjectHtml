@@ -241,8 +241,7 @@ $(document).ready(function () {
   }
 
   loadAllCustomer();
-  startTime();
-  document.getElementById("calendar").innerHTML = formattedToday;
+ 
 
   $("#sdt").change(function () {
     var sdt = $("#sdt").val().toString();
@@ -289,31 +288,3 @@ $(document).ready(function () {
     }
   });
 });
-
-function startTime() {
-  const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
-}
-
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
-  } // add zero in front of numbers < 10
-  return i;
-}
-
-const today = new Date();
-const yyyy = today.getFullYear();
-let mm = today.getMonth() + 1; // Months start at 0!
-let dd = today.getDate();
-
-if (dd < 10) dd = "0" + dd;
-if (mm < 10) mm = "0" + mm;
-
-const formattedToday = dd + "/" + mm + "/" + yyyy;
