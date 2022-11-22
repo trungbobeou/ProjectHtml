@@ -37,12 +37,6 @@ $(document).ready(function () {
         console.log(idli);
         $("#" + idli).remove();
     })
-
-    $("#listGroupLine li input").on("click", function () {
-        var idli = $(this).closest('li').attr('id');
-        console.log(idli);
-       
-    })
 })
 
 /*Time Function*/
