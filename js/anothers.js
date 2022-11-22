@@ -9,13 +9,17 @@ $(document).ready(function () {
     /*Chance Function*/
     $("#addLine").on("click", function () {
         var lineAdd = $("#valueAddLine").val();
-        var rowLine = "<li id='" + lineAdd + "' class='list-group-item'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + lineAdd + "</li>"
+        console.log(lineAdd);
+        var rowLine = "<li id='" + lineAdd + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + lineAdd + "</li>"
         $("#listGroupLine").append(rowLine);
+        $("#chanceModal .modal-body").click();
     })
 
     $("#dellLine").on("click", function () {
         var lineAdd = $("#valueAddLine").val();
+        console.log(lineAdd);
         $("#" + lineAdd).remove();
+        $("#chanceModal .modal-body").click();
     })
     $("#closeChance").on("click", function () {
         $("#listGroupLine").remove();
@@ -24,12 +28,20 @@ $(document).ready(function () {
 
     var array = [813, 820, 829, 870, 835, 859, 801, 812, 815, 817, 825, 852, 833, 834, 836, 858];
     for (var i = 0; i < array.length; i++) {
-        var rowLine = "<li id='" + array[i] + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + array[i] + "</li>"
+        var rowLine = "<li id='" + array[i] + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + array[i] + " <button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button></li>"
         $("#listGroupLine").append(rowLine);
     }
 
-    $("#listGroupLine li").on("click", function(){
-        console.log('asd');
+    $("#listGroupLine li button").on("click", function () {
+        var idli = $(this).closest('li').attr('id');
+        console.log(idli);
+        $("#" + idli).remove();
+    })
+
+    $("#listGroupLine li input").on("click", function () {
+        var idli = $(this).closest('li').attr('id');
+        console.log(idli);
+       
     })
 })
 
@@ -43,22 +55,21 @@ function startTime() {
     s = checkTime(s);
     document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
-  }
-  
-  function checkTime(i) {
+}
+
+function checkTime(i) {
     if (i < 10) {
-      i = "0" + i;
+        i = "0" + i;
     } // add zero in front of numbers < 10
     return i;
-  }
-  
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  let mm = today.getMonth() + 1; // Months start at 0!
-  let dd = today.getDate();
-  
-  if (dd < 10) dd = "0" + dd;
-  if (mm < 10) mm = "0" + mm;
-  
-  const formattedToday = dd + "/" + mm + "/" + yyyy;
-  
+}
+
+const today = new Date();
+const yyyy = today.getFullYear();
+let mm = today.getMonth() + 1; // Months start at 0!
+let dd = today.getDate();
+
+if (dd < 10) dd = "0" + dd;
+if (mm < 10) mm = "0" + mm;
+
+const formattedToday = dd + "/" + mm + "/" + yyyy;
