@@ -1,6 +1,4 @@
-
 $(document).ready(function () {
-
     /*Time Function*/
     startTime();
     document.getElementById("calendar").innerHTML = formattedToday;
@@ -22,7 +20,7 @@ $(document).ready(function () {
         $("#chanceModal .modal-body").click();
     })
     $("#closeChance").on("click", function () {
-        $("#listGroupLine").remove();
+        //$("#listGroupLine").remove();
         $("#valueAddLine").val("");
     })
 

@@ -180,4 +180,8 @@ $(document).ready(function () {
   // $( "#editnv" ).on( "click", function() {
   //   console.log('asd');
   // });
+  $("#resetData").on("click", function () {
+    //loadAllCustomer();
+    loadAllUsers();
+  })
 })

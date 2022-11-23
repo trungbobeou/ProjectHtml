@@ -287,4 +287,9 @@ $(document).ready(function () {
       loadCustomerAddress(sdt);
     }
   });
+
+  $("#resetData").on("click", function () {
+    loadAllCustomer();
+    //loadAllUsers();
+  })
 });

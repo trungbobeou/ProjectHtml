@@ -48,7 +48,7 @@
                 Khách hàng
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#customers"><i class="far
+                <li><a class="dropdown-item" href="#customers" id="hrefCustomers"><i class="far
                         fa-user fa-lg mb-1"></i> | Khách hàng</a>
                 </li>
                 <li>
@@ -73,7 +73,7 @@
                 Nhân viên
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#users"><i class="far
+                <li><a class="dropdown-item" href="#users" id="hrefUsers"><i class="far
                         fa-user fa-lg mb-1"></i> | Nhân viên</a></li>
                 <li>
                   <hr class="dropdown-divider">
@@ -123,6 +123,14 @@
                   <i class="fa-solid fa-clock"></i>
                 </div>
                 <span id="clock"></span>
+              </a>
+            </li>
+            <li class="nav-item text-center mx-2 mx-lg-1 text-do">
+              <a class="nav-link" href="#!" id="resetData">
+                <div>
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <span>Refresh Data</span>
               </a>
             </li>
           </ul>
@@ -303,9 +311,9 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeCaculator"
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" 
                 style="width: 5rem;"><i class="fa-solid fa-xmark fa-lg"></i></button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="closeCaculator"
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" 
                 style="width: 5rem;"><i class="fa-solid fa-floppy-disk fa-lg"></i></button>
             </div>
           </form>
@@ -329,7 +337,7 @@
               <button type="button" class="btn btn-danger"><i class="fa-solid fa-xmark" id="dellLine"></i></button>
             </div>
             <ul class="list-group" id="listGroupLine">
-              
+
             </ul>
           </div>
           <div class="modal-footer">
