@@ -24,6 +24,10 @@ $(document).ready(function () {
         $("#valueAddLine").val("");
     })
 
+    $("#clearChance").on("click", function () {
+        $("#listGroupLine li").remove();
+    })
+
     var array = [813, 820, 829, 870, 835, 859, 801, 812, 815, 817, 825, 852, 833, 834, 836, 858];
     for (var i = 0; i < array.length; i++) {
         var rowLine = "<li id='" + array[i] + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + array[i] + " <button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button></li>"
