@@ -102,5 +102,8 @@ $(document).ready(function () {
   $("#resetData").on("click", function () {
     //loadAllCustomer();
     loadAllUsers();
+    console.log('a');
   })
+  loadAllUsers();
+  $("#resetData").click();
 })

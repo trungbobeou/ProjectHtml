@@ -292,4 +292,6 @@ $(document).ready(function () {
     loadAllCustomer();
     //loadAllUsers();
   })
+
+  $("#resetData").click();
 });
