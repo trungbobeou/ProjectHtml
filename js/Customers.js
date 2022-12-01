@@ -238,10 +238,7 @@ $(document).ready(function () {
         $("#customersBody").append(rows);
       }
     );
-  }
-
-  loadAllCustomer();
- 
+  } 
 
   $("#sdt").change(function () {
     var sdt = $("#sdt").val().toString();

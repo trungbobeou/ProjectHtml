@@ -22,23 +22,25 @@
     <!-- Navbar -->
     <?php include 'Navbar.html'; ?>
     <!-- Section table -->
-    <?php include "Customers.html"; ?>
-    <?php include "Users.html"; ?>
+    <?php include $_GET['page'] ?>
+
     <?php include "Modals.html"; ?>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.6.1.min.js"></script>
-  <script src="js/Customer.js"></script>
-  <script src="js/Users.js"></script>
+  <?php
+    $_GET['page'];
+
+    if (isset( $_GET['page'] ) && $_GET['page'] == 'Customers.html') {
+      echo "<script src='js/Customers.js'></script>";
+    } elseif (isset( $_GET['page'] ) && $_GET['page'] == 'Users.html') {
+      echo "<script src='js/Users.js'></script>";
+    }
+  ?>
   <script src="js/jquery.dataTables.min.js"></script>
   <script src="js/dataTables.bootstrap5.min.js"></script>
   <script src="js/caculator.js"></script>
   <script src="js/anothers.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#resetData").click();
-    })
-  </script>
 </body>
 
 </html>
