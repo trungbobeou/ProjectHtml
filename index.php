@@ -25,15 +25,12 @@
     <!-- Section table -->
     <?php include $_GET['page'] ?>
 
-    <div id="includedContent"></div>
-
     <?php include "Modals.html"; ?>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.6.1.min.js"></script>
   <?php
   $_GET['page'];
-
   if (isset($_GET['page']) && $_GET['page'] == 'Customers.html') {
     echo "<script src='js/Customers.js'></script>";
   } elseif (isset($_GET['page']) && $_GET['page'] == 'Users.html') {
@@ -44,19 +41,6 @@
   <script src="js/dataTables.bootstrap5.min.js"></script>
   <script src="js/caculator.js"></script>
   <script src="js/anothers.js"></script>
-  <script>
-    $(document).ready(function () {
-      
-      $("#hrefCustomers").on("click", function () {
-        console.log('aca');
-        $("#includedContent").load("Customers.html");
-      })
-      $("#hrefUsers").on("click", function () {
-        console.log('acasdwqea');
-        $("#includedContent").load("Users.html");
-      })
-    });
-  </script>
 </body>
 
 </html>
