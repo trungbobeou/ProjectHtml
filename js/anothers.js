@@ -8,7 +8,7 @@ $(document).ready(function () {
     $("#addLine").on("click", function () {
         var lineAdd = $("#valueAddLine").val();
         console.log(lineAdd);
-        var rowLine = "<li id='" + lineAdd + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + lineAdd + "</li>"
+        var rowLine = "<li id='" + lineAdd + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'><span class='text-danger'>" + lineAdd + "</span></li>"
         $("#listGroupLine").append(rowLine);
         $("#chanceModal .modal-body").click();
     })
@@ -28,9 +28,71 @@ $(document).ready(function () {
         $("#listGroupLine li").remove();
     })
 
-    var array = [813, 820, 829, 870, 835, 859, 801, 812, 815, 817, 825, 852, 833, 834, 836];
+    var array = [
+        {
+            "line": "501",
+            "name": "Nguyễn Thị Huỳnh Nhi"
+        },
+        {
+            "line": "502",
+            "name": "Trần Thị Yến Thanh"
+        },
+        {
+            "line": "503",
+            "name": "Hoàng Văn Hải"
+        },
+        {
+            "line": "504",
+            "name": "Đỗ Thanh Toàn"
+        },
+        {
+            "line": "505",
+            "name": "Lê Thị Thanh Ngọc"
+        },
+        {
+            "line": "506",
+            "name": "Nguyễn Thị Diệp"
+        },
+        {
+            "line": "507",
+            "name": "Nguyễn Thị Minh Thư"
+        },
+        {
+            "line": "508",
+            "name": "Lê Thị Thanh Hiền"
+        },
+        {
+            "line": "601",
+            "name": "Huỳnh Thị Kim Thoa"
+        },
+        {
+            "line": "602",
+            "name": "Đinh Thị Mai"
+        },
+        {
+            "line": "603",
+            "name": "Nguyễn Thị Trúc Mai"
+        },
+        {
+            "line": "604",
+            "name": "Nguyễn Trúc Thi"
+        },
+        {
+            "line": "605",
+            "name": "Lương Thị Thanh Hoa"
+        },
+        {
+            "line": "606",
+            "name": "Nguyễn Hà Linh Chi"
+        },
+        {
+            "line": "607",
+            "name": "Phạm Nguyễn Hoài Thương"
+        },
+
+    ];
     for (var i = 0; i < array.length; i++) {
-        var rowLine = "<li id='" + array[i] + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + array[i] + " <button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button></li>"
+        var rowLine = "<li id='" + array[i].line + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + "<span class='text-danger'>" + array[i].line + "</span>" + "<button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button></li>"
         $("#listGroupLine").append(rowLine);
     }
 
