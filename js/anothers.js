@@ -8,7 +8,7 @@ $(document).ready(function () {
     $("#addLine").on("click", function () {
         var lineAdd = $("#valueAddLine").val();
         console.log(lineAdd);
-        var rowLine = "<li id='" + lineAdd + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'><span class='text-danger'>" + lineAdd + "</span></li>"
+        var rowLine = "<li id='" + lineAdd + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + "<span class='text-danger'>" + lineAdd + "</span><button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button></li>"
         $("#listGroupLine").append(rowLine);
         $("#chanceModal .modal-body").click();
     })
