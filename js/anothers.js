@@ -92,8 +92,16 @@ $(document).ready(function () {
 
     ];
     for (var i = 0; i < array.length; i++) {
-        var rowLine = "<li id='" + array[i].line + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + "<span class='text-danger'>" + array[i].line + "</span>" + "<button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button></li>"
+        var rowLine = "<li id='" + array[i].line + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + "<span class='text-danger'>" + array[i].line + "</span><button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button><span class='text-primary float-none'>   || " + array[i].name + "</span></li>"
         $("#listGroupLine").append(rowLine);
+
+        // $.getJSON("http://localhost:3000/users/getusername/" + array[i].line, function (data) {
+        //     for (var j = 0; j < data.result.length; j++) {
+        //         console.log(data.result[j].display_name)
+        //         var rowLine = "<li id='" + data.result[j].username + "' class='list-group-item list-group-item-action'><input class='form-check-input me-2' type='checkbox'><input class='form-check-input me-2' type='checkbox'>" + "<span class='text-danger'>" + data.result[j].username + "</span><button class='badge bg-danger float-end'><i class='fa-solid fa-xmark'></i></button><span class='text-primary float-end mr-5'>" + data.result[j].display_name + "</span></li>"
+        //         $("#listGroupLine").append(rowLine);
+        //     }
+        // });
     }
 
     $("#listGroupLine li button").on("click", function () {

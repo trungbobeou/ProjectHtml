@@ -51,56 +51,61 @@ $(document).ready(function () {
 
   function loadAllUsers() {
     $.getJSON("http://localhost:3000/users", function (data) {
-      var rows;
-      for (var i = 0; i < data.result.length; i++) {
-        const date = data.result[i].created_on_date;
-        const year = date.substring(0, 4);
-        const month = date.substring(5, 7);
-        const day = date.substring(8, 10);
-        const hour = date.substring(11, 13);
-        const min = date.substring(14, 16);
-        const second = date.substring(17, 19);
-        const datefull =
-          day +
-          "/" +
-          month +
-          "/" +
-          year +
-          " " +
-          hour +
-          ":" +
-          min +
-          ":" +
-          second;
 
-        var table = $("#usersTable").DataTable();
-        table.row
-          .add([
-            i + 1,
-            data.result[i].username,
-            data.result[i].display_name,
-            data.result[i].email,
-            datefull,
-            data.result[i].password,
-            data.result[i].user_id,
-          ])
-          .draw();
+    })
+      .done(function (data) {
+        var rows;
+        for (var i = 0; i < data.result.length; i++) {
+          const date = data.result[i].created_on_date;
+          const year = date.substring(0, 4);
+          const month = date.substring(5, 7);
+          const day = date.substring(8, 10);
+          const hour = date.substring(11, 13);
+          const min = date.substring(14, 16);
+          const second = date.substring(17, 19);
+          const datefull =
+            day +
+            "/" +
+            month +
+            "/" +
+            year +
+            " " +
+            hour +
+            ":" +
+            min +
+            ":" +
+            second;
 
-        // rows += "<tr>";
-        // rows += "<td>" + i + "</td>";
-        // rows += "<td>" + data.result[i].username + "</td>";
-        // rows += "<td>" + data.result[i].display_name + "</td>";
-        // rows += "<td>" + data.result[i].email + "</td>";
-        // rows += "<td>" + datefull + "</td>";
-        // rows += "<td class='text-center'><button class='btn btn-primary' id='editnv'>Sửa</button></td>";
-        // rows += "</tr>";
-      }
-      // $("#usersBody tr").remove();
-      // $("#usersBody").append(rows);
-    });
+          var table = $("#usersTable").DataTable();
+          table.row
+            .add([
+              i + 1,
+              data.result[i].username,
+              data.result[i].display_name,
+              data.result[i].email,
+              datefull,
+              data.result[i].password,
+              data.result[i].user_id,
+            ])
+            .draw();
+        }
+      }).fail(function () {
+        console.log("error");
+        swal({
+          text: "Hello world!",
+        });
+      })
+      .always(function () {
+        swal({
+          text: "Hello world!",
+        });
+      });
   }
+
   $("#resetData").on("click", function () {
     //loadAllCustomer();
+    var table = $("#usersTable").DataTable();
+    table.clear().draw();
     loadAllUsers();
   })
   $("#resetData").click();

@@ -286,6 +286,8 @@ $(document).ready(function () {
   });
 
   $("#resetData").on("click", function () {
+    var table = $("#customersTable").DataTable();
+    table.clear().draw();
     loadAllCustomer();
     //loadAllUsers();
   })

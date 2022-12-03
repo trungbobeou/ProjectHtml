@@ -14,7 +14,8 @@
   <link href="node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
   <link href="node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/caculator.css">
+  <link href="node_modules/sweetalert2/dist/sweetalert2.all.min.js" rel="stylesheet">
+  <link href="css/caculator.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,6 +42,7 @@
   <script src="js/dataTables.bootstrap5.min.js"></script>
   <script src="js/caculator.js"></script>
   <script src="js/anothers.js"></script>
+  <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
