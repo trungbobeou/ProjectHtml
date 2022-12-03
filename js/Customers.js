@@ -7,6 +7,7 @@ $(document).ready(function () {
 
   function loadAllCustomer() {
     $.getJSON("http://localhost:3000/customers", function (data) {
+    }).done(function (data) {
       var rows;
       for (var i = 0; i < data.result.length; i++) {
         const date = data.result[i].created_on_date;
@@ -30,11 +31,19 @@ $(document).ready(function () {
       }
       $("#customersBody tr").remove();
       $("#customersBody").append(rows);
+
+      Toast("success", "Success,", "Loading data completed");
+    }).fail(function () {
+      Toast("error", "Error", "Failed to load data from database");
+    }).always(function () {
+
     });
   }
 
   function loadCustomerTel(sdt) {
     $.getJSON("http://localhost:3000/customers/gettel/" + sdt, function (data) {
+
+    }).done(function (data) {
       var rows;
       for (var i = 0; i < data.result.length; i++) {
         const date = data.result[i].created_on_date;
@@ -45,17 +54,7 @@ $(document).ready(function () {
         const min = date.substring(14, 16);
         const second = date.substring(17, 19);
         const datefull =
-          day +
-          "/" +
-          month +
-          "/" +
-          year +
-          " " +
-          hour +
-          ":" +
-          min +
-          ":" +
-          second;
+          day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + second;
 
         rows += "<tr id='table2'>";
         rows += "<td>" + i + "</td>";
@@ -69,6 +68,11 @@ $(document).ready(function () {
       }
       $("#customersBody tr").remove();
       $("#customersBody").append(rows);
+      Toast("success", "Success,", "Loading data completed");
+    }).fail(function () {
+      Toast("error", "Error", "Failed to load data from database");
+    }).always(function () {
+
     });
   }
 
@@ -76,6 +80,8 @@ $(document).ready(function () {
     $.getJSON(
       "http://localhost:3000/customers/gettel2/" + sdt,
       function (data) {
+
+      }).done(function (data) {
         var rows;
         for (var i = 0; i < data.result.length; i++) {
           const date = data.result[i].created_on_date;
@@ -85,18 +91,7 @@ $(document).ready(function () {
           const hour = date.substring(11, 13);
           const min = date.substring(14, 16);
           const second = date.substring(17, 19);
-          const datefull =
-            day +
-            "/" +
-            month +
-            "/" +
-            year +
-            " " +
-            hour +
-            ":" +
-            min +
-            ":" +
-            second;
+          const datefull = day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + second;
 
           rows += "<tr id='table2'>";
           rows += "<td>" + i + "</td>";
@@ -110,14 +105,20 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-      }
-    );
+        Toast("success", "Success,", "Loading data completed");
+      }).fail(function () {
+        Toast("error", "Error", "Failed to load data from database");
+      }).always(function () {
+
+      });
   }
 
   function loadCustomerName(sdt) {
     $.getJSON(
       "http://localhost:3000/customers/getname/" + sdt,
       function (data) {
+
+      }).done(function (data) {
         var rows;
         for (var i = 0; i < data.result.length; i++) {
           const date = data.result[i].created_on_date;
@@ -127,18 +128,7 @@ $(document).ready(function () {
           const hour = date.substring(11, 13);
           const min = date.substring(14, 16);
           const second = date.substring(17, 19);
-          const datefull =
-            day +
-            "/" +
-            month +
-            "/" +
-            year +
-            " " +
-            hour +
-            ":" +
-            min +
-            ":" +
-            second;
+          const datefull = day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + second;
 
           rows += "<tr id='table2'>";
           rows += "<td>" + i + "</td>";
@@ -152,14 +142,21 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-      }
-    );
+
+        Toast("success", "Success,", "Loading data completed");
+      }).fail(function () {
+        Toast("error", "Error", "Failed to load data from database");
+      }).always(function () {
+
+      });
   }
 
   function loadCustomerCode(sdt) {
     $.getJSON(
       "http://localhost:3000/customers/getcode/" + sdt,
       function (data) {
+
+      }).done(function (data) {
         var rows;
         for (var i = 0; i < data.result.length; i++) {
           const date = data.result[i].created_on_date;
@@ -169,18 +166,7 @@ $(document).ready(function () {
           const hour = date.substring(11, 13);
           const min = date.substring(14, 16);
           const second = date.substring(17, 19);
-          const datefull =
-            day +
-            "/" +
-            month +
-            "/" +
-            year +
-            " " +
-            hour +
-            ":" +
-            min +
-            ":" +
-            second;
+          const datefull = day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + second;
 
           rows += "<tr id='table2'>";
           rows += "<td>" + i + "</td>";
@@ -194,14 +180,21 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-      }
-    );
+
+        Toast("success", "Success,", "Loading data completed");
+      }).fail(function () {
+        Toast("error", "Error", "Failed to load data from database");
+      }).always(function () {
+
+      });
   }
 
   function loadCustomerAddress(sdt) {
     $.getJSON(
       "http://localhost:3000/customers/getaddress/" + sdt,
       function (data) {
+
+      }).done(function (data) {
         var rows;
         for (var i = 0; i < data.result.length; i++) {
           const date = data.result[i].created_on_date;
@@ -211,18 +204,7 @@ $(document).ready(function () {
           const hour = date.substring(11, 13);
           const min = date.substring(14, 16);
           const second = date.substring(17, 19);
-          const datefull =
-            day +
-            "/" +
-            month +
-            "/" +
-            year +
-            " " +
-            hour +
-            ":" +
-            min +
-            ":" +
-            second;
+          const datefull = day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + second;
 
           rows += "<tr id='table2'>";
           rows += "<td>" + i + "</td>";
@@ -236,9 +218,14 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-      }
-    );
-  } 
+
+        Toast("success", "Success,", "Loading data completed");
+      }).fail(function () {
+        Toast("error", "Error", "Failed to load data from database");
+      }).always(function () {
+
+      });
+  }
 
   $("#sdt").change(function () {
     var sdt = $("#sdt").val().toString();
