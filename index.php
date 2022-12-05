@@ -28,12 +28,14 @@
 
     <?php include "Modals.html"; ?>
   </div>
+  
+  <script src="js/colored-toast.js"></script>
+  <link rel="stylesheet" href="css/colored-toast.css" />
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/jquery.dataTables.min.js"></script>
   <script src="js/dataTables.bootstrap5.min.js"></script>
   <script src="js/caculator.js"></script>
-  <link rel="stylesheet" href="css/colored-toast.css" />
   <script src="js/anothers.js"></script>
   <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
   <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>

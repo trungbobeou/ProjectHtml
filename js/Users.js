@@ -38,16 +38,14 @@ $(document).ready(function () {
   $("#usersTable tbody").on("dblclick", "tr", function () {
     var table = $("#usersTable").DataTable();
     var data = table.row(this).data();
-    $("#usernameEmployee").html(data[1]);
     $("#editEmployees").modal('show');
+    $("#usernameEmployee").html(data[1]);
     $("#taikhoannv").val(data[1]);
     $("#matkhaunv").val(data[5]);
     $("#tennv").val(data[2]);
     $("#manv").val(data[6]);
+    Toast("success", "Success", "Open Users Modal - User: " + data[2])
   });
-
-  $('#editEmployees').on('show.bs.modal', function (event) {
-  })
 
   function loadAllUsers() {
     $.getJSON("http://localhost:3000/users", function (data) {

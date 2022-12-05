@@ -109,6 +109,14 @@ $(document).ready(function () {
         console.log(idli);
         $("#" + idli).remove();
     })
+
+    $('#staticBackdrop').on('show.bs.modal', function (event) {
+        Toast("success", "Success", "Open Caculator Modal")
+    })
+
+    $('#chanceModal').on('show.bs.modal', function (event) {
+        Toast("success", "Success", "Open Chance Modal")
+    })
 })
 
 $("#resetData").click();
@@ -141,23 +149,3 @@ if (dd < 10) dd = "0" + dd;
 if (mm < 10) mm = "0" + mm;
 
 const formattedToday = dd + "/" + mm + "/" + yyyy;
-
-function Toast(icon, title, text) {
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-right',
-        iconColor: 'white',
-        customClass: {
-            popup: 'colored-toast'
-        },
-        showConfirmButton: false,
-        timerProgressBar: true
-    });
-
-    Toast.fire({
-        icon: icon,
-        title: title,
-        text: text,
-        timer: 3000
-    })
-}
