@@ -16,6 +16,9 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="node_modules/sweetalert2/dist/sweetalert2.all.min.js" rel="stylesheet">
   <link href="css/caculator.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/transition.css" />
+  <link rel="stylesheet" type="text/css" href="css/ldld.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/loader.css" />
 </head>
 
 <body>

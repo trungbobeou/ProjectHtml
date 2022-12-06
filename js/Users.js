@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   function loadAllUsers() {
     $.getJSON("http://localhost:3000/users", function (data) {
-
+      
     }).done(function (data) {
       var rows;
       for (var i = 0; i < data.result.length; i++) {
@@ -87,18 +87,22 @@ $(document).ready(function () {
           .draw();
       }
       Toast("success", "Success,", "Loading data completed");
+      $("#loaderdiv").removeClass("loader");
+      $("#lmaskdiv").removeClass("lmask");
     }).fail(function (error) {
       Toast("error", "Error", "Failed to load data from database");
     }).always(function () {
-
+      
     });
   }
 
   $("#resetData").on("click", function () {
-    //loadAllCustomer();
     var table = $("#usersTable").DataTable();
     table.clear().draw();
+    $("#loaderdiv").addClass("loader");
+    $("#lmaskdiv").addClass("lmask");
     loadAllUsers();
   })
+  
   $("#resetData").click();
 })

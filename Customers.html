@@ -1,48 +1,52 @@
-<section id="customers">
-    <br /><br /><br /><br />
-    <div class="col-md-12 text-center">
-      <button type="button" class="btn btn-primary btn-lg">Danh sách khách
-        hàng</button>
-    </div>
-    <table id="customersTable" class="table
+<section id="customers" class="ld ld-power-on">
+  <br /><br /><br /><br />
+  <div class="col-md-12 text-center">
+    <button type="button" class="btn btn-primary btn-lg">Danh sách khách
+      hàng</button>
+  </div>
+  <div id="loaderdiv"></div>
+  <table id="customersTable" class="table
          table-hover" style="width:100%; background-color:
         white;">
-      <thead>
-        <tr class="text-center">
-          <th class="text-center">STT</th>
-          <th class="text-center">Mã KH</th>
-          <th class="text-center">Tên KH</th>
-          <th class="text-center">SĐT</th>
-          <th class="text-center">SĐT 2</th>
-          <th class="text-center">Địa chỉ</th>
-          <th class="text-center">Ngày tạo</th>
+    <thead>
+      <tr class="text-center">
+        <th class="text-center">STT</th>
+        <th class="text-center">Mã KH</th>
+        <th class="text-center">Tên KH</th>
+        <th class="text-center">SĐT</th>
+        <th class="text-center">SĐT 2</th>
+        <th class="text-center">Địa chỉ</th>
+        <th class="text-center">Ngày tạo</th>
+      </tr>
+    </thead>
+    <thead>
+      <form>
+        <tr id="searchbar">
+          <td></td>
+          <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="makh"></td>
+          <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="tenkh"></td>
+          <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="sdt"></td>
+          <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="sdt2"></td>
+          <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="diachi"></td>
+          <td></td>
         </tr>
-      </thead>
-      <thead>
-        <form>
-          <tr id="searchbar">
-            <td></td>
-            <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="makh"></td>
-            <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="tenkh"></td>
-            <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="sdt"></td>
-            <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="sdt2"></td>
-            <td><input type="search" placeholder="Search" class="form-control" aria-label="Search" id="diachi"></td>
-            <td></td>
-          </tr>
-        </form>
-      </thead>
+      </form>
+    </thead>
+    <div id="lmaskdiv" class="lmask">
       <tbody id="customersBody" class="mt-5">
+
       </tbody>
-      <tfoot>
-        <tr class="text-center">
-          <th class="text-center">STT</th>
-          <th class="text-center">Mã KH</th>
-          <th class="text-center">Tên KH</th>
-          <th class="text-center">SĐT</th>
-          <th class="text-center">SĐT 2</th>
-          <th class="text-center">Địa chỉ</th>
-          <th class="text-center">Ngày tạo</th>
-        </tr>
-      </tfoot>
-    </table>
-  </section>
+    </div>
+    <tfoot>
+      <tr class="text-center">
+        <th class="text-center">STT</th>
+        <th class="text-center">Mã KH</th>
+        <th class="text-center">Tên KH</th>
+        <th class="text-center">SĐT</th>
+        <th class="text-center">SĐT 2</th>
+        <th class="text-center">Địa chỉ</th>
+        <th class="text-center">Ngày tạo</th>
+      </tr>
+    </tfoot>
+  </table>
+</section>

@@ -44,3 +44,13 @@ section {
   padding: 10px;
   box-sizing: inherit;
 }
+
+.lmask {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  background-color: white;
+  z-index: 9999;
+  opacity: 0.4;
+  pointer-events: 100;
+}

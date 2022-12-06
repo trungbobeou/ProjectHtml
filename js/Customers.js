@@ -7,6 +7,7 @@ $(document).ready(function () {
 
   function loadAllCustomer() {
     $.getJSON("http://localhost:3000/customers", function (data) {
+
     }).done(function (data) {
       var rows;
       for (var i = 0; i < data.result.length; i++) {
@@ -31,8 +32,9 @@ $(document).ready(function () {
       }
       $("#customersBody tr").remove();
       $("#customersBody").append(rows);
-
       Toast("success", "Success,", "Loading data completed");
+      $("#loaderdiv").removeClass("loader");
+      $("#lmaskdiv").removeClass("lmask");
     }).fail(function () {
       Toast("error", "Error", "Failed to load data from database");
     }).always(function () {
@@ -42,7 +44,6 @@ $(document).ready(function () {
 
   function loadCustomerTel(sdt) {
     $.getJSON("http://localhost:3000/customers/gettel/" + sdt, function (data) {
-
     }).done(function (data) {
       var rows;
       for (var i = 0; i < data.result.length; i++) {
@@ -69,6 +70,8 @@ $(document).ready(function () {
       $("#customersBody tr").remove();
       $("#customersBody").append(rows);
       Toast("success", "Success,", "Loading data completed");
+      $("#loaderdiv").removeClass("loader");
+      $("#lmaskdiv").removeClass("lmask");
     }).fail(function () {
       Toast("error", "Error", "Failed to load data from database");
     }).always(function () {
@@ -106,6 +109,8 @@ $(document).ready(function () {
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
         Toast("success", "Success,", "Loading data completed");
+        $("#loaderdiv").removeClass("loader");
+        $("#lmaskdiv").removeClass("lmask");
       }).fail(function () {
         Toast("error", "Error", "Failed to load data from database");
       }).always(function () {
@@ -142,8 +147,9 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-
         Toast("success", "Success,", "Loading data completed");
+        $("#loaderdiv").removeClass("loader");
+        $("#lmaskdiv").removeClass("lmask");
       }).fail(function () {
         Toast("error", "Error", "Failed to load data from database");
       }).always(function () {
@@ -180,8 +186,9 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-
         Toast("success", "Success,", "Loading data completed");
+        $("#loaderdiv").removeClass("loader");
+        $("#lmaskdiv").removeClass("lmask");
       }).fail(function () {
         Toast("error", "Error", "Failed to load data from database");
       }).always(function () {
@@ -218,8 +225,9 @@ $(document).ready(function () {
         }
         $("#customersBody tr").remove();
         $("#customersBody").append(rows);
-
         Toast("success", "Success,", "Loading data completed");
+        $("#loaderdiv").removeClass("loader");
+        $("#lmaskdiv").removeClass("lmask");
       }).fail(function () {
         Toast("error", "Error", "Failed to load data from database");
       }).always(function () {
@@ -275,8 +283,9 @@ $(document).ready(function () {
   $("#resetData").on("click", function () {
     var table = $("#customersTable").DataTable();
     table.clear().draw();
+    $("#loaderdiv").addClass("loader");
+    $("#lmaskdiv").addClass("lmask");
     loadAllCustomer();
-    //loadAllUsers();
   })
 
   $("#resetData").click();
