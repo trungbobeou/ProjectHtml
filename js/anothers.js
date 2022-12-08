@@ -3,7 +3,6 @@ $(document).ready(function () {
     startTime();
     document.getElementById("calendar").innerHTML = formattedToday;
 
-
     /*Chance Function*/
     $("#addLine").on("click", function () {
         var lineAdd = $("#valueAddLine").val();
@@ -26,6 +25,7 @@ $(document).ready(function () {
 
     $("#clearChance").on("click", function () {
         $("#listGroupLine li").remove();
+        Toast("success", "Success", "Reset Change")
     })
 
     var array = [

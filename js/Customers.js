@@ -26,7 +26,7 @@ $(document).ready(function () {
         rows += "<td>" + data.result[i].customer_name + "</td>";
         rows += "<td>" + data.result[i].tel + "</td>";
         rows += "<td>" + data.result[i].tel2 + "</td>";
-        rows += "<td>" + data.result[i].address1 + "</td>";
+        rows += "<td>" + data.result[i].address1 + " - " + data.result[i].ward_name + " - " + data.result[i].district_name + " - " + data.result[i].province_name + "</td>";
         rows += "<td>" + datefull + "</td>";
         rows += "</tr>";
       }
@@ -44,6 +44,7 @@ $(document).ready(function () {
 
   function loadCustomerTel(sdt) {
     $.getJSON("http://localhost:3000/customers/gettel/" + sdt, function (data) {
+
     }).done(function (data) {
       var rows;
       for (var i = 0; i < data.result.length; i++) {
@@ -63,7 +64,7 @@ $(document).ready(function () {
         rows += "<td>" + data.result[i].customer_name + "</td>";
         rows += "<td>" + data.result[i].tel + "</td>";
         rows += "<td>" + data.result[i].tel2 + "</td>";
-        rows += "<td>" + data.result[i].address1 + "</td>";
+        rows += "<td>" + data.result[i].address1 + " - " + data.result[i].ward_name + " - " + data.result[i].district_name + " - " + data.result[i].province_name + "</td>";
         rows += "<td>" + datefull + "</td>";
         rows += "</tr>";
       }
@@ -102,7 +103,7 @@ $(document).ready(function () {
           rows += "<td>" + data.result[i].customer_name + "</td>";
           rows += "<td>" + data.result[i].tel + "</td>";
           rows += "<td>" + data.result[i].tel2 + "</td>";
-          rows += "<td>" + data.result[i].address1 + "</td>";
+          rows += "<td>" + data.result[i].address1 + " - " + data.result[i].ward_name + " - " + data.result[i].district_name + " - " + data.result[i].province_name + "</td>";
           rows += "<td>" + datefull + "</td>";
           rows += "</tr>";
         }
@@ -141,7 +142,7 @@ $(document).ready(function () {
           rows += "<td>" + data.result[i].customer_name + "</td>";
           rows += "<td>" + data.result[i].tel + "</td>";
           rows += "<td>" + data.result[i].tel2 + "</td>";
-          rows += "<td>" + data.result[i].address1 + "</td>";
+          rows += "<td>" + data.result[i].address1 + " - " + data.result[i].ward_name + " - " + data.result[i].district_name + " - " + data.result[i].province_name + "</td>";
           rows += "<td>" + datefull + "</td>";
           rows += "</tr>";
         }
@@ -180,7 +181,7 @@ $(document).ready(function () {
           rows += "<td>" + data.result[i].customer_name + "</td>";
           rows += "<td>" + data.result[i].tel + "</td>";
           rows += "<td>" + data.result[i].tel2 + "</td>";
-          rows += "<td>" + data.result[i].address1 + "</td>";
+          rows += "<td>" + data.result[i].address1 + " - " + data.result[i].ward_name + " - " + data.result[i].district_name + " - " + data.result[i].province_name + "</td>";
           rows += "<td>" + datefull + "</td>";
           rows += "</tr>";
         }
@@ -219,7 +220,7 @@ $(document).ready(function () {
           rows += "<td>" + data.result[i].customer_name + "</td>";
           rows += "<td>" + data.result[i].tel + "</td>";
           rows += "<td>" + data.result[i].tel2 + "</td>";
-          rows += "<td>" + data.result[i].address1 + "</td>";
+          rows += "<td>" + data.result[i].address1 + " - " + data.result[i].ward_name + " - " + data.result[i].district_name + " - " + data.result[i].province_name + "</td>";
           rows += "<td>" + datefull + "</td>";
           rows += "</tr>";
         }
