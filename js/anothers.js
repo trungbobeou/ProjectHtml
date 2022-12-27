@@ -42,14 +42,6 @@ $(document).ready(function () {
             "name": "Hoàng Văn Hải"
         },
         {
-            "line": "504",
-            "name": "Đỗ Thanh Toàn"
-        },
-        {
-            "line": "505",
-            "name": "Lê Thị Thanh Ngọc"
-        },
-        {
             "line": "506",
             "name": "Nguyễn Thị Diệp"
         },
@@ -88,6 +80,10 @@ $(document).ready(function () {
         {
             "line": "607",
             "name": "Phạm Nguyễn Hoài Thương"
+        },
+        {
+            "line": "609",
+            "name": "Trần Thị Ngọc Tuyền"
         },
 
     ];
