@@ -60,7 +60,7 @@ $(document).ready(function () {
         {
             "line": "602",
             "name": "Đinh Thị Mai"
-        },
+        },``
         {
             "line": "603",
             "name": "Nguyễn Thị Trúc Mai"
