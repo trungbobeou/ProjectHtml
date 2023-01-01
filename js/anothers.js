@@ -80,11 +80,7 @@ $(document).ready(function () {
         {
             "line": "607",
             "name": "Phạm Nguyễn Hoài Thương"
-        },
-        {
-            "line": "609",
-            "name": "Trần Thị Ngọc Tuyền"
-        },
+        }
 
     ];
     for (var i = 0; i < array.length; i++) {
