@@ -62,10 +62,6 @@ $(document).ready(function () {
             "name": "Đinh Thị Mai"
         },
         {
-            "line": "603",
-            "name": "Nguyễn Thị Trúc Mai"
-        },
-        {
             "line": "604",
             "name": "Nguyễn Trúc Thi"
         },
